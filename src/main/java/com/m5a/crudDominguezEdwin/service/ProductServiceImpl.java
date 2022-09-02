@@ -20,12 +20,7 @@ public class ProductServiceImpl implements ProductService {
     @Autowired
     private IProductDao repository;
 
-    @Override
-    public ProductDTO crearP(ProductDTO p) {
-
-        return repository.insert(p);
-
-    }
+ 
 
     @Override
     public ProductDTO UpdateP(ProductDTO p) {
@@ -44,6 +39,11 @@ public class ProductServiceImpl implements ProductService {
     @Override
     public void eliminar(String id) {
         repository.deleteById(id);
+    }
+
+    @Override
+    public ProductDTO crearP(ProductDTO p) {
+        return repository.save(p);
     }
 
 }

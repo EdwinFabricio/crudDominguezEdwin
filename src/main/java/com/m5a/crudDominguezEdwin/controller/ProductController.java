@@ -26,8 +26,8 @@ import org.springframework.web.bind.annotation.RestController;
  * @author DELL_USER
  */
 @RestController
-@CrossOrigin(origins = "*", methods = {RequestMethod.POST, RequestMethod.GET, RequestMethod.PUT,
-    RequestMethod.DELETE})
+@CrossOrigin(origins = "*", methods = { RequestMethod.POST, RequestMethod.GET, RequestMethod.PUT,
+		RequestMethod.DELETE })
 @RequestMapping("/api/products")
 public class ProductController {
     

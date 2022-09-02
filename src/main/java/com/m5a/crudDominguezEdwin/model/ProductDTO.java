@@ -12,25 +12,23 @@ import org.springframework.data.mongodb.core.mapping.Document;
  *
  * @author DELL_USER
  */
-@Document
+@Document(collection = "products")
 public class ProductDTO {
-    
+
     @Id
     private String _id;
-    
-    private String name;
-    
-    private Double price;
-    
-    private LocalDate expiry_date;
-    
-    private String proveedor;
 
-    public String getId() {
+    private String name;
+
+    private Double price;
+
+    private LocalDate expiry_date;
+
+    public String get_id() {
         return _id;
     }
 
-    public void setId(String _id) {
+    public void set_id(String _id) {
         this._id = _id;
     }
 
@@ -58,16 +56,4 @@ public class ProductDTO {
         this.expiry_date = expiry_date;
     }
 
-    public String getProveedor() {
-        return proveedor;
-    }
-
-    public void setProveedor(String proveedor) {
-        this.proveedor = proveedor;
-    }
-    
-    
-    
-    
-    
 }
